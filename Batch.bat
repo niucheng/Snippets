@@ -10,6 +10,6 @@ echo Hi there^^!
 echo %cmdcmdline% | find "%~0" > nul
 if %errorlevel% EQU 0 pause
 
-::
+:: 图形界面启动则暂停，替代方案
 echo %cmdcmdline% | findstr /c:"%~n0" > nul
 if %errorlevel% EQU 0 pause
