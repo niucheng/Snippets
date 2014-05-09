@@ -16,5 +16,5 @@ int main(const int argc, const char* const* argv)
     // Invoke function via macro
     PRINT_GREETINGS;
 
-    return 0;
+    return EXIT_SUCCESS;
 }
