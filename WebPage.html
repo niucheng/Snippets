@@ -11,6 +11,20 @@
 
 <body>
 
+<script type='text/javascript'>
+function factorial(n) {
+    var a = [1];
+    for (var i=1; i<=n; i++) {
+        for (var j=0, c=0; j<a.length || c!=0; j++) {
+            var m = (j<a.length) ? (i*a[j] + c) : c;
+            a[j] = m % 10;
+            c = (m - a[j]) / 10;
+        }
+    }
+    return a.reverse().join("");
+}
+</script>
+
     <header>
         <nav>
             <ul>
@@ -37,6 +51,15 @@
             <p>Sample web page.</p>
         </article>
 
+        <article>
+            <header>
+                <h2>Factorial</h2>
+                <p>Posted on <time datetime="2014-05-23T00:20:00+08:00">May     23th 2014</time> by <a href="#">Writer</a> - <a href="#comments"># comments<    /a></p>
+            </header>
+            <p><input type="text" name="Digital" value="1000"><br>
+               <input type="submit" value="Calculate!"></p>
+        </article>
+
     </section>
 
     <aside>
@@ -51,3 +74,4 @@
 </body>
 
 </html>
+
