@@ -3,13 +3,18 @@
 #include <string.h>
 
 /*
- * ÕâÀïÊ¾·¶µÄÊÇºê¶¨ÒåÊ±³£ÓÃµÄÒ»ÖÖ¼¼ÇÉ
- * 1) ÏÂÃæµÄºêÊÇÒ»¸ö·Ç¸´ºÏÓï¾ä
- * 2) ÎªÂú×ãÍ¨ÓÃĞÔºÍÇ¿×³ĞÔÒªÇó£¬²»ÄÜ¶ÔºêµÄÊ¹ÓÃ·½·¨×öÈÎºÎ¼ÙÉè
+ * è¿™é‡Œç¤ºèŒƒçš„æ˜¯å®å®šä¹‰æ—¶å¸¸ç”¨çš„ä¸€ç§æŠ€å·§
+ * 1) ä¸‹é¢çš„å®æ˜¯ä¸€ä¸ªéå¤åˆè¯­å¥
+ * 2) ä¸ºæ»¡è¶³é€šç”¨æ€§å’Œå¼ºå£®æ€§è¦æ±‚ï¼Œä¸èƒ½å¯¹å®çš„ä½¿ç”¨æ–¹æ³•åšä»»ä½•å‡è®¾
  */
 #define PRINT_GREETINGS do { \
     printf("Hi there!\n"); \
 } while (0)
+
+/*
+ * æ„é€ å‡½æ•°
+ */
+void foo __attribute__ ((constructor));
 
 int main(const int argc, const char* const* argv)
 {
@@ -18,3 +23,9 @@ int main(const int argc, const char* const* argv)
 
     return EXIT_SUCCESS;
 }
+
+void foo(void)
+{
+    printf("foo\n");
+}
+
