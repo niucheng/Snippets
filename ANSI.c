@@ -14,7 +14,7 @@
 /*
  * 构造函数
  */
-void foo __attribute__ ((constructor));
+void foo(void) __attribute__ ((constructor));
 
 int main(const int argc, const char* const* argv)
 {
