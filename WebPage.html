@@ -62,8 +62,16 @@ function factorial(n) {
                    May 23th 2014</time> by <a href="#">Writer</a>
                    - <a href="#comments"># comments</a></p>
             </header>
-            <p><input type="text" name="Digital" value="1000"><br>
-               <input type="submit" value="Calculate!"></p>
+            <p> <!-- onkeypress does not work in firefox -->
+                <input type="text" name="Digital" value="1000"
+                 id="number"
+                 onkeypress="javascript:(
+                 (window.event.keyCode || window.event.which) == '13')
+                 && alert(factorial(
+                 document.getElementById('number').value));">
+                <input type="submit" value="Calculate!"
+                 onclick="javascript:alert(factorial(
+                 document.getElementById('number').value));"></p>
         </article>
 
     </section>
