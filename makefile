@@ -1,3 +1,5 @@
+# For compiling ANSI.c
+
 BIN = ANSI
 OBJS = ANSI.o
 
