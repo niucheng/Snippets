@@ -8,6 +8,14 @@ Python snippet
 import os
 import sys
 
+dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(dir, 'sub_dir_name'))
+
+def get_basename(path_to_file):
+    head, tail = os.path.split(path_to_file)
+    #
+    return tail or os.path.basename(head)
+
 if __name__ == "__main__":
     if len (sys.argv) == 1:
         print ("Hi there!")
